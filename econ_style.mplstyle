@@ -1,0 +1,73 @@
+# econ_style.mplstyle
+# A matplotlib style sheet for economic / econometric data analysis.
+# Inspired by The Economist / FT house styles + Tufte/Wilke data-viz principles.
+#
+# USAGE:
+#   import matplotlib.pyplot as plt
+#   plt.style.use('econ_style.mplstyle')
+#
+
+# ---- Figure ----
+figure.figsize        : 8, 5
+figure.dpi             : 120
+figure.facecolor       : white
+figure.autolayout      : True
+
+# ---- Axes ----
+axes.facecolor         : white
+axes.edgecolor         : 0.3
+axes.linewidth         : 0.8
+axes.grid              : True
+axes.axisbelow         : True
+axes.titlesize         : 14
+axes.titleweight       : bold
+axes.titlelocation     : left
+axes.titlepad          : 12
+axes.labelsize         : 11
+axes.labelcolor        : 0.15
+axes.labelweight       : normal
+axes.spines.top        : False
+axes.spines.right      : False
+axes.spines.left       : True
+axes.spines.bottom     : True
+
+# Color cycle: muted, print-safe, colorblind-friendlier palette
+# (navy, brick red, teal, ochre, slate, plum, forest)
+axes.prop_cycle        : cycler('color', ['1F3B4D', 'C0504D', '4C8C8C', 'D9A441', '7A7A7A', '8064A2', '4F6228'])
+
+# ---- Grid ----
+grid.color             : 0.85
+grid.linewidth          : 0.6
+grid.linestyle          : -
+
+# ---- Lines ----
+lines.linewidth        : 1.8
+lines.markersize       : 5
+lines.solid_capstyle   : round
+
+# ---- Ticks ----
+xtick.color            : 0.15
+ytick.color             : 0.15
+xtick.labelsize        : 10
+ytick.labelsize        : 10
+xtick.direction        : out
+ytick.direction        : out
+xtick.major.size       : 3
+ytick.major.size       : 3
+xtick.minor.visible    : False
+ytick.minor.visible    : False
+
+# ---- Legend ----
+legend.frameon         : False
+legend.fontsize        : 10
+legend.loc             : best
+
+# ---- Font ----
+font.family            : sans-serif
+font.sans-serif        : Helvetica, Arial, DejaVu Sans, Liberation Sans
+font.size              : 11
+
+# ---- Saving ----
+savefig.dpi            : 200
+savefig.bbox           : tight
+savefig.facecolor      : white
