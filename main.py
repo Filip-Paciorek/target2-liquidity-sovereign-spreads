@@ -159,21 +159,21 @@ def main():
     #plot differentiated HHI against yield 
     fig,(ax1,ax2) = plt.subplots(1,2,sharex=True,figsize=(14,5))
     
-    ax1.plot(t_HHI_differentiated.index,t_HHI_differentiated,color='#C0504D',label='Δ HHI')
-    ax1.set_xlabel('Year')
-    ax1.set_ylabel('Δ HHI')
-    ax1.set_title('Panel A: Δ Total HHI (Month-over-Month)')
-    ax2.plot(t_BS_differentiated.index,t_BS_differentiated,label='Δ Yield spread')
+    ax2.plot(t_HHI_differentiated.index,t_HHI_differentiated,color='#C0504D',label='Δ HHI')
     ax2.set_xlabel('Year')
-    ax2.set_ylabel('Δ Yield Spread (%)')
-    ax2.set_title('Panel B: Δ Total Yield Spread (Month-over-Month)')
+    ax2.set_ylabel('Δ HHI')
+    ax2.set_title('Panel A: Δ Total HHI (Month-over-Month)')
+    ax1.plot(t_BS_differentiated.index,t_BS_differentiated,label='Δ Yield spread')
+    ax1.set_xlabel('Year')
+    ax1.set_ylabel('Δ Yield Spread (%)')
+    ax1.set_title('Panel B: Δ Total Yield Spread (Month-over-Month)')
     fig.text(0.99,-0.01,"*Differentiation method: t_n - t_(n-1)",ha="right",va="bottom",fontsize=9,color="gray",style="italic")
     fig.savefig('./charts/HHI_vs_Yield_differentiated.png',dpi=300)
     plt.close(fig)
     fig,ax = plt.subplots()
-
+    
+    ax.plot(rp_non_stationary.index,rp_non_stationary,label='non stationary')
     ax.plot(rp_stationary.index,rp_stationary,label='stationary')
-    ax.plot(rp_non_stationary.index,rp_non_stationary,label='non stationary') #color='#d724bf')
 
     ax.legend()
     ax.set_xlabel(f'Year')
