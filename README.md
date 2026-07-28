@@ -7,7 +7,7 @@ This project demonstrates the critical importance of stationarity testing in fin
 ---
 
 ## Context & Motivation
-Inspired by *Manganelli & Wolswijk (2007)* on the drivers of Eurozone sovereign yield spreads, this project tests whether quantity-based payment system concentration, measured via a Herfindahl-Hirschman Index ($HHI$) of TARGET2 balances, co-moves with sovereign debt stress.
+Inspired by *Manganelli & Wolswijk (2007)* on the drivers of Eurozone sovereign yield spreads, this project tests whether quantity-based payment system concentration, measured via a Herfindahl-Hirschman Index (HHI) of TARGET2 balances, co-moves with sovereign debt stress.
 <p align="center">
   <img src="./charts/HHI_vs_Yield.png" alt="Total HHI vs Yield Spread (2002-2026)" width="90%">
 </p>
@@ -39,8 +39,8 @@ To evaluate whether the series contain unit roots, both raw and first-difference
 | **Total HHI** | First Diff $\Delta I(0)$ | -5.0468 | 0.0000 | -2.8736 | 0.0793 | 0.1000 | 0.4630 | **Stationary** |
 | **Yield Spread** | First Diff $\Delta I(0)$ | -8.8975 | 0.0000 | -2.8736 | 0.1297 | 0.1000 | 0.4630 | **Stationary** |
 
-* **Raw Levels ($I(1)$):** Non-stationary. Both series exhibit strong structural trends over time.
-* **First Differences ($I(0)$):** Stationary. Month-over-month transformations ($\Delta Y_t = Y_t - Y_{t-1}$) eliminate the unit roots.
+* **Raw Levels:** Non-stationary. Both series exhibit strong structural trends over time.
+* **First Differences:** Stationary. Month-over-month transformations ($\Delta Y_t = Y_t - Y_{t-1}$) eliminate the unit roots.
 
 Isolating month-over-month changes shows the same 2011–2012 stress episode visible in both series, alongside markedly reduced volatility in later years.
 <p align="center">
